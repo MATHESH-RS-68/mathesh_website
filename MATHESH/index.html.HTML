@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SKILLRACK_ANSWER</title>
+    <link rel="icon" href="image/logo.png">
+    <!-- Orbitron font for futuristic look -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+        body {
+            background: #0a0a0a;
+            background: linear-gradient(135deg, #0a0a0a 60%, #232323 100%);
+            color: #fff;
+            font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+            transition: background 0.5s, color 0.5s;
+            cursor: url('image/rocket.jpg') 16 16, pointer;
+        }
+        .futuristic-glow {
+            text-shadow: 0 0 8px #ff9100, 0 0 16px #ff9100, 0 0 32px #ff9100;
+            letter-spacing: 2px;
+        }
+        .futuristic-btn, .music-toggle-btn {
+            background: #111;
+            color: #ff9100;
+            border: 2px solid #ff9100;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-size: 1.1em;
+            font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 0 12px #ff9100, 0 0 24px #ff9100 inset;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+        .futuristic-btn:hover, .music-toggle-btn:hover {
+            background: #ff9100;
+            color: #111;
+            box-shadow: 0 0 24px #ff9100, 0 0 48px #ff9100 inset;
+        }
+        .futuristic-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .music-toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+            padding: 10px 32px;
+        }
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff9100 0%, #232323 100%);
+            margin: 30px 0;
+            box-shadow: 0 0 16px #ff9100;
+        }
+        a {
+            color: #ff9100;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #fff;
+            text-shadow: 0 0 8px #ff9100;
+        }
+        img.futuristic-img {
+            border-radius: 16px;
+            box-shadow: 0 0 24px #ff9100, 0 0 48px #232323 inset;
+            margin: 20px 0;
+            max-width: 90vw;
+            height: auto;
+        }
+        .section {
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 24px;
+            border-radius: 16px;
+            background: rgba(10,10,10,0.85);
+            box-shadow: 0 0 24px #ff910033;
+        }
+        .light-mode .section {
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 0 24px #ff910033;
+        }
+        .game-error { color: #ff0055 !important; }
+        .game-success, .game-hint { color: #ff9100 !important; }
+        .peek-cartoon {
+            position: fixed;
+            bottom: 40px;
+            height: 120px;
+            z-index: 2000;
+            transition: left 1s, right 1s;
+            pointer-events: none;
+            user-select: none;
+        }
+        #peekLeft { left: -120px; }
+        #peekRight { right: -120px; }
+        @media (max-width: 600px) {
+            .section { padding: 10px; }
+            .peek-cartoon { height: 70px; }
+            .futuristic-btn, .music-toggle-btn { font-size: 1em; padding: 8px 12px; }
+        }
+    </style>
+</head>
+<body id="mainBody">
+    <button onclick="toggleTheme()" id="themeBtn" class="futuristic-btn" aria-label="Toggle Theme">Light Mode</button>
+    <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Music">Music Off</button>
+    <!-- Cartoon Characters Peeking -->
+    <img id="peekLeft" src="image/pngtree-cute-little-penguin-peeking-around-the-corner-on-white-background-png-image_4750774.png" alt="Cartoon Penguin Left" class="peek-cartoon" />
+    <img id="peekRight" src="image/pngtree-cute-little-penguin-peeking-around-the-corner-on-white-background-png-image_4750774.png" alt="Cartoon Penguin Right" class="peek-cartoon" />
+    <center>
+        <h1 class="futuristic-glow">SKILLRACK ANSWERS</h1>
+        <p class="futuristic-glow">Don't miss points and program; Stay updated.</p>
+    </center>
+    <hr>
+    <div class="section">
+        <p>
+            Coding on SkillRack is an effective way to sharpen your programming skills and problem-solving abilities. The platform offers a wide range of challenges tailored to different levels, helping you build confidence and speed. By consistently practicing, you develop logic, syntax fluency, and algorithmic thinking. SkillRack’s timed tests simulate real-world scenarios, boosting your readiness for interviews and competitive exams. You can track your progress, learn new techniques, and receive immediate feedback to refine your approach. Whether you’re a beginner or seasoned coder, regular use of SkillRack enhances your consistency, adaptability, and accuracy—key qualities every successful programmer needs in the fast-paced tech world.
+        </p>
+        <center>
+            <img src="image/Screenshot 2025-07-27 131051.png" class="futuristic-img" alt="Skillrack Screenshot 1">
+        </center>
+    </div>
+    <center><h1 class="futuristic-glow">MY POINTS</h1></center>
+    <center><h2 class="futuristic-glow">Easy program | More points | Improve Skill</h2></center>
+    <div class="section">
+        <p>
+            Practicing coding on SkillRack helps improve logic, speed, and accuracy. Its varied challenges build confidence and prepare you for interviews. Timed problems enhance your real-world readiness, while instant feedback boosts learning. Consistent use strengthens your programming foundation and sharpens your problem-solving skills—a must for any aspiring developer.
+        </p>
+        <center>
+            <img src="image/Screenshot 2025-07-27 140957.png" class="futuristic-img" alt="Skillrack Screenshot 2">
+        </center>
+        <h1>
+            <a href="https://www.linkedin.com/in/mathesh-rs-a13b23326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LINKEDIN PROFILE</a>
+        </h1>
+        <h2 class="futuristic-glow">Easy program | More points | Improve Skill</h2>
+        <p>
+            To excel in coding, one must learn problem-solving, logical thinking, and algorithm design. Mastery of languages like Python or JavaScript is vital. Understanding data structures, debugging techniques, and version control helps build robust programs. Curiosity, persistence, and creativity fuel continuous learning and growth in the dynamic world of development.
+        </p>
+    </div>
+    <hr>
+    <center>
+        <h1 class="futuristic-glow">CONTACT</h1>
+        <h2>+91 6369034210 | rsmathesh10tha@gmail.com</h2>
+        <h5>ADDRESS: Chennai</h5>
+    </center>
+    <div class="section" style="text-align:center;">
+        <h2 class="futuristic-glow">Futuristic Guessing Game</h2>
+        <p>Guess a number between <span class="futuristic-glow">1</span> and <span class="futuristic-glow">10</span>:</p>
+        <input type="number" id="guessInput" min="1" max="10" class="futuristic-btn" style="width:80px;position:static;">
+        <button onclick="checkGuess()" class="futuristic-btn" style="position:static;">Guess</button>
+        <p id="gameResult" class="futuristic-glow"></p>
+        <button onclick="resetGame()" class="futuristic-btn" style="display:none;position:static;" id="resetBtn">Play Again</button>
+    </div>
+    <div style="text-align:center; margin: 40px 0;">
+        <audio id="bgMusic" controls autoplay loop style="width:300px; filter: drop-shadow(0 0 12px #ff9100); outline:none; border-radius:8px;">
+            <source src="image/future-design-344320.mp3" type="audio/mpeg">
+        </audio>
+        <div class="futuristic-glow" style="margin-top:8px;">Now Playing: Futuristic Instrumental</div>
+    </div>
+    <script>
+        // Theme toggle
+        function toggleTheme() {
+            const body = document.getElementById('mainBody');
+            const btn = document.getElementById('themeBtn');
+            body.classList.toggle('light-mode');
+            btn.textContent = body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+        }
+        // Guessing game
+        let secretNumber = Math.floor(Math.random() * 10) + 1;
+        let gameOver = false;
+        function checkGuess() {
+            if (gameOver) return;
+            const guess = parseInt(document.getElementById('guessInput').value);
+            const result = document.getElementById('gameResult');
+            if (isNaN(guess) || guess < 1 || guess > 10) {
+                result.textContent = "Enter a valid number (1-10)!";
+                result.className = "futuristic-glow game-error";
+                return;
+            }
+            if (guess === secretNumber) {
+                result.textContent = "🎉 Correct! You guessed the number!";
+                result.className = "futuristic-glow game-success";
+                document.getElementById('resetBtn').style.display = "inline-block";
+                gameOver = true;
+            } else if (guess < secretNumber) {
+                result.textContent = "Too low! Try again.";
+                result.className = "futuristic-glow game-hint";
+            } else {
+                result.textContent = "Too high! Try again.";
+                result.className = "futuristic-glow game-hint";
+            }
+        }
+        function resetGame() {
+            secretNumber = Math.floor(Math.random() * 10) + 1;
+            document.getElementById('gameResult').textContent = "";
+            document.getElementById('gameResult').className = "futuristic-glow";
+            document.getElementById('guessInput').value = "";
+            document.getElementById('resetBtn').style.display = "none";
+            gameOver = false;
+        }
+        // Blue snowflake sprinkle effect
+        function createSnowflake() {
+            const snowflake = document.createElement('span');
+            snowflake.textContent = '❄';
+            snowflake.style.position = 'fixed';
+            snowflake.style.top = '-40px';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.fontSize = (Math.random() * 16 + 16) + 'px';
+            snowflake.style.color = '#00bfff';
+            snowflake.style.textShadow = '0 0 8px #00bfff, 0 0 16px #00bfff';
+            snowflake.style.opacity = Math.random() * 0.5 + 0.5;
+            snowflake.style.pointerEvents = 'none';
+            snowflake.style.zIndex = 9999;
+            document.body.appendChild(snowflake);
+
+            const duration = Math.random() * 3 + 3; // 3-6 seconds
+            const drift = (Math.random() - 0.5) * 100; // left/right drift
+
+            snowflake.animate([
+                { transform: `translateY(0px) translateX(0px)` },
+                { transform: `translateY(100vh) translateX(${drift}px)` }
+            ], {
+                duration: duration * 1000,
+                easing: 'linear'
+            });
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, duration * 1000);
+        }
+        setInterval(createSnowflake, 300);
+
+        // Cartoon peek logic
+        function peekCartoons() {
+            const left = document.getElementById('peekLeft');
+            const right = document.getElementById('peekRight');
+            // Reset positions before animation
+            left.style.transition = 'left 1s';
+            right.style.transition = 'right 1s';
+            left.style.left = '-120px';
+            right.style.right = '-120px';
+
+            // Peek left cartoon
+            setTimeout(() => {
+                left.style.left = '0px';
+            }, 100);
+
+            // Hide left cartoon
+            setTimeout(() => {
+                left.style.left = '-120px';
+            }, 2100);
+
+            // Peek right cartoon
+            setTimeout(() => {
+                right.style.right = '0px';
+            }, 2600);
+
+            // Hide right cartoon
+            setTimeout(() => {
+                right.style.right = '-120px';
+            }, 4600);
+        }
+        setInterval(peekCartoons, 10000);
+        setTimeout(peekCartoons, 2000);
+
+        // Music toggle logic
+        window.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('bgMusic');
+            const musicBtn = document.getElementById('musicToggleBtn');
+            let musicOn = true;
+            musicBtn.onclick = function() {
+                if (musicOn) {
+                    music.pause();
+                    musicBtn.textContent = "Music On";
+                    musicOn = false;
+                } else {
+                    music.play();
+                    musicBtn.textContent = "Music Off";
+                    musicOn = true;
+                }
+            };
+        });
+
+        // Rocket trail effect for cursor
+        document.addEventListener('mousemove', function(e) {
+            const trail = document.createElement('span');
+            trail.style.position = 'fixed';
+            trail.style.left = (e.clientX - 5) + 'px';
+            trail.style.top = (e.clientY + 9) + 'px';
+            trail.style.width = '8px';
+            trail.style.height = '16px';
+            trail.style.borderRadius = '4px 4px 8px 8px';
+            trail.style.background = 'linear-gradient(180deg, #fffbe6 0%, #ff9100 60%, #ff0055 100%)';
+            trail.style.boxShadow = '0 0 12px 4px #ff9100, 0 0 16px 8px #ff0055';
+            trail.style.pointerEvents = 'none';
+            trail.style.zIndex = 9999;
+            trail.style.transition = 'opacity 0.5s, transform 0.5s';
+            trail.style.transform = 'scaleY(1.1) rotate(' + (Math.random() * 10 - 5) + 'deg)';
+            document.body.appendChild(trail);
+
+            setTimeout(() => {
+                trail.style.opacity = '0';
+                trail.style.transform = 'scaleY(2) translateY(12px)';
+            }, 10);
+            setTimeout(() => {
+                trail.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
